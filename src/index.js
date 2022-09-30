@@ -30,7 +30,12 @@ import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import FlightLanding from "views/flightLanding.js";
 
+
+import axios from 'axios'
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+axios.defaults.baseURL = process.env.BACKEND_URL;
 
 root.render(
   <BrowserRouter>
