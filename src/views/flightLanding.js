@@ -21,6 +21,8 @@ import ReactDatetime from "react-datetime";
 import { useState } from "react";
 import { getFlights } from "../services/flightService"
 
+import LoginButton from "../components/Auth0LogInButton"
+
 function FlightLanding(props) {
   const [departingCity, setDepartingCity] = useState();
   const [departingDate, setDepartingDate] = useState();
@@ -39,6 +41,9 @@ function FlightLanding(props) {
 
   return (
     <>
+      <Row>
+        <LoginButton></LoginButton>
+      </Row>
       <Row>
         <Col lg="4" sm="6">
           <FormGroup>

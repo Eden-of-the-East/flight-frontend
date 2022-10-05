@@ -30,6 +30,7 @@ import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import FlightLanding from "views/flightLanding.js";
 
+import { Auth0Provider } from "@auth0/auth0-react";
 
 import axios from 'axios'
 
@@ -39,6 +40,10 @@ axios.defaults.baseURL = process.env.BACKEND_URL;
 
 root.render(
   <BrowserRouter>
+  <Auth0Provider
+  domain="dev-p9e48hfz.us.auth0.com"
+  clientId="1XdOxJsEXVWmPOE6tBAPNXNk3zYKvLj7"
+  redirectUri={window.location.origin}>
     <Switch>
       <Route path="/" exact render={(props) => <Index {...props} />} />
       <Route
@@ -68,5 +73,6 @@ root.render(
       />
       <Redirect to="/" />
     </Switch>
+    </Auth0Provider>
   </BrowserRouter>
 );
