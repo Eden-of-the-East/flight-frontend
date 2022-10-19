@@ -9,4 +9,5 @@ export async function getFlights(departingCity, flightNumber, departingDate) {
     } catch (error) {
         console.log(error);
     }
-}
+}    
+

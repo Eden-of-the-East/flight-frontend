@@ -43,7 +43,7 @@ root.render(
   <Auth0Provider
   domain="dev-p9e48hfz.us.auth0.com"
   clientId="1XdOxJsEXVWmPOE6tBAPNXNk3zYKvLj7"
-  redirectUri={window.location.origin}>
+  redirectUri={window.location.href}>
     <Switch>
       <Route path="/" exact render={(props) => <Index {...props} />} />
       <Route
